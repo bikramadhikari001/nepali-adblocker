@@ -1,17 +1,18 @@
-/* ── Popup Styles — Nepali Adblocker ──────────────────────────────────────── */
+/* ── Popup v2 Styles — Premium Dark Theme ───────────────────────────────── */
 
 :root {
-  --bg-primary: #1a1a2e;
-  --bg-secondary: #16213e;
-  --bg-card: #0f3460;
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-card: #1c2333;
   --accent: #e94560;
+  --accent-glow: rgba(233, 69, 96, 0.3);
   --accent-hover: #ff6b81;
   --accent-green: #00c853;
-  --text-primary: #eee;
-  --text-secondary: #aab;
-  --text-muted: #778;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --text-muted: #484f58;
+  --border: rgba(255, 255, 255, 0.08);
   --radius: 10px;
-  --shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -29,17 +30,17 @@ body {
 }
 
 body.disabled {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .popup {
   padding: 16px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
-/* ── Header ────────────────────────────────────────────────────────────────── */
+/* ── Header ──────────────────────────────────────────────────────────────── */
 
 .header {
   display: flex;
@@ -54,18 +55,27 @@ body.disabled {
 }
 
 .logo {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .title {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: -0.3px;
 }
 
+.version {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(233, 69, 96, 0.12);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
 .power-btn {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   border: 2px solid var(--accent);
   background: transparent;
@@ -74,13 +84,13 @@ body.disabled {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .power-btn.active {
   background: var(--accent);
   color: white;
-  box-shadow: 0 0 12px rgba(233, 69, 96, 0.4);
+  box-shadow: 0 0 16px var(--accent-glow);
 }
 
 .power-btn.inactive {
@@ -89,14 +99,14 @@ body.disabled {
 }
 
 .power-btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
-/* ── Stats ─────────────────────────────────────────────────────────────────── */
+/* ── Stats ───────────────────────────────────────────────────────────────── */
 
 .stats-section {
   display: flex;
-  gap: 12px;
+  gap: 10px;
 }
 
 .stat {
@@ -105,39 +115,51 @@ body.disabled {
   border-radius: var(--radius);
   padding: 12px;
   text-align: center;
+  border: 1px solid var(--border);
+  transition: border-color 0.2s;
+}
+
+.stat:hover {
+  border-color: rgba(233, 69, 96, 0.2);
 }
 
 .stat-number {
   display: block;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 800;
   color: var(--accent);
   line-height: 1;
   margin-bottom: 4px;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-total .stat-number {
+  color: var(--accent-green);
 }
 
 .stat-label {
-  font-size: 10px;
+  font-size: 9px;
   color: var(--text-secondary);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
+  font-weight: 600;
 }
 
-/* ── Site section ──────────────────────────────────────────────────────────── */
+/* ── Site section ────────────────────────────────────────────────────────── */
 
 .site-section {
   background: var(--bg-secondary);
   border-radius: var(--radius);
-  padding: 12px;
+  padding: 10px 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border: 1px solid var(--border);
 }
 
 .site-domain {
   font-size: 13px;
   font-weight: 600;
-  color: var(--text-primary);
   max-width: 160px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -148,7 +170,7 @@ body.disabled {
   display: flex;
   align-items: center;
   gap: 4px;
-  padding: 6px 12px;
+  padding: 5px 12px;
   border-radius: 20px;
   border: 1.5px solid var(--text-muted);
   background: transparent;
@@ -156,7 +178,7 @@ body.disabled {
   font-size: 11px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.2s;
 }
 
 .whitelist-btn:hover {
@@ -166,40 +188,45 @@ body.disabled {
 
 .whitelist-btn.whitelisted {
   border-color: var(--accent-green);
-  background: rgba(0, 200, 83, 0.15);
+  background: rgba(0, 200, 83, 0.1);
   color: var(--accent-green);
 }
 
 .whitelist-icon {
-  font-size: 12px;
+  font-size: 11px;
 }
 
-/* ── Actions ───────────────────────────────────────────────────────────────── */
+/* ── Tools ───────────────────────────────────────────────────────────────── */
 
-.actions {
+.tools-section {
   display: flex;
-  gap: 8px;
+  gap: 6px;
 }
 
-.action-btn {
+.tool-btn {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  padding: 8px 12px;
-  border-radius: var(--radius);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 5px;
+  padding: 8px 6px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
   background: var(--bg-secondary);
   color: var(--text-secondary);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: all 0.15s;
 }
 
-.action-btn:hover {
+.tool-btn:hover {
   background: var(--bg-card);
   color: var(--text-primary);
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.tool-btn:active {
+  transform: translateY(0);
 }

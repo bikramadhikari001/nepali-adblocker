@@ -4,77 +4,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nepali Adblocker — Settings</title>
+    <title>Nepali Adblocker — Dashboard</title>
     <link rel="stylesheet" href="options.css">
 </head>
 
 <body>
     <div class="container">
         <header class="header">
-            <h1>🛡️ Nepali Adblocker</h1>
-            <p class="subtitle">Settings & Dashboard</p>
+            <h1>🛡️ Nepali Adblocker <span class="v-badge">v2</span></h1>
+            <p class="subtitle">Dashboard & Settings</p>
         </header>
 
-        <!-- Tabs -->
         <nav class="tabs">
-            <button class="tab active" data-tab="filter-lists">Filter Lists</button>
-            <button class="tab" data-tab="whitelist">Whitelist</button>
-            <button class="tab" data-tab="custom-rules">My Rules</button>
-            <button class="tab" data-tab="about">About</button>
+            <button class="tab active" data-tab="filter-lists">📋 Lists</button>
+            <button class="tab" data-tab="whitelist">✅ Whitelist</button>
+            <button class="tab" data-tab="custom-rules">📝 Rules</button>
+            <button class="tab" data-tab="request-log">📊 Logger</button>
+            <button class="tab" data-tab="backup">💾 Backup</button>
+            <button class="tab" data-tab="about">ℹ️ About</button>
         </nav>
 
-        <!-- Filter Lists Tab -->
+        <!-- Filter Lists -->
         <section id="filter-lists" class="tab-content active">
             <h2>Filter Lists</h2>
-            <div class="list-item">
-                <label>
-                    <input type="checkbox" id="nepali-list" checked disabled>
-                    <strong>Nepali Ads Filter</strong>
-                    <span class="list-meta">Built-in · Blocks ads on top 100 Nepali sites</span>
-                </label>
+            <div id="list-items">
+                <!-- Populated by JS -->
             </div>
-            <div class="list-item">
-                <label>
-                    <input type="checkbox" id="easylist-mini" checked disabled>
-                    <strong>EasyList (Curated)</strong>
-                    <span class="list-meta">Built-in · Common global ad domains</span>
-                </label>
-            </div>
-            <div class="list-info">
-                <p>Filter lists auto-update when the extension updates.</p>
+            <div class="list-actions">
+                <button id="update-lists" class="btn-primary">🔄 Check for Updates</button>
+                <span id="update-status" class="save-status"></span>
             </div>
         </section>
 
-        <!-- Whitelist Tab -->
+        <!-- Whitelist -->
         <section id="whitelist" class="tab-content">
             <h2>Whitelisted Sites</h2>
             <p class="info">Ad blocking is disabled on these sites.</p>
-            <ul id="whitelist-sites" class="site-list">
-                <!-- Populated by JS -->
-            </ul>
+            <ul id="whitelist-sites" class="site-list"></ul>
             <p id="whitelist-empty" class="empty-msg">No sites whitelisted.</p>
         </section>
 
-        <!-- Custom Rules Tab -->
+        <!-- Custom Rules -->
         <section id="custom-rules" class="tab-content">
             <h2>My Rules</h2>
-            <p class="info">Add custom filter rules in ABP/uBlock Origin syntax.</p>
+            <p class="info">ABP/uBlock Origin syntax. One rule per line.</p>
             <textarea id="custom-rules-input" placeholder="! Example rules:
 ||example-ad-domain.com^
 onlinekhabar.com##.my-custom-ad-class
-@@||allow-this-domain.com^" rows="12"></textarea>
-            <button id="save-rules" class="btn-primary">Save Rules</button>
-            <span id="save-status" class="save-status"></span>
+@@||allow-this-domain.com^" rows="14"></textarea>
+            <div class="rule-actions">
+                <button id="save-rules" class="btn-primary">Save Rules</button>
+                <span id="save-status" class="save-status"></span>
+            </div>
         </section>
 
-        <!-- About Tab -->
+        <!-- Request Logger -->
+        <section id="request-log" class="tab-content">
+            <h2>Network Logger</h2>
+            <div class="logger-toolbar">
+                <span id="log-count" class="log-count">0 entries</span>
+                <button id="clear-log" class="btn-secondary">Clear</button>
+            </div>
+            <div id="log-table-wrapper" class="log-table-wrapper">
+                <table class="log-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>URL</th>
+                            <th>Type</th>
+                            <th>Rule</th>
+                        </tr>
+                    </thead>
+                    <tbody id="log-body">
+                        <tr>
+                            <td colspan="4" class="empty-msg">No blocked requests logged yet.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Backup / Import-Export -->
+        <section id="backup" class="tab-content">
+            <h2>Backup & Restore</h2>
+            <div class="backup-section">
+                <div class="backup-card">
+                    <h3>💾 Export Settings</h3>
+                    <p>Download your whitelist, custom rules, and preferences as a JSON file.</p>
+                    <button id="export-btn" class="btn-primary">Export Backup</button>
+                </div>
+                <div class="backup-card">
+                    <h3>📂 Import Settings</h3>
+                    <p>Restore from a previously exported backup file.</p>
+                    <input type="file" id="import-file" accept=".json" style="display:none">
+                    <button id="import-btn" class="btn-primary">Import Backup</button>
+                    <span id="import-status" class="save-status"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
         <section id="about" class="tab-content">
             <h2>About</h2>
             <div class="about-info">
-                <p><strong>Nepali Adblocker</strong> v1.0.0</p>
-                <p>A lightweight Chrome extension that blocks ads on Nepali websites, inspired by uBlock Origin.</p>
-                <p>Blocks ads on the top 100 Nepali websites with special focus on news sites like OnlineKhabar,
-                    Setopati, eKantipur, and more.</p>
+                <p><strong>Nepali Adblocker</strong> v2.0.0</p>
+                <p>Premium ad blocker for Nepali websites with clean reading mode, element picker, tracker blocking, and
+                    auto-updating filter lists.</p>
+                <hr>
+                <h3>Features</h3>
+                <ul class="feature-list">
+                    <li>🚫 Network-level ad blocking (45+ rules)</li>
+                    <li>🎨 Cosmetic filtering (9+ Nepali sites)</li>
+                    <li>🔒 Tracker & fingerprint blocking</li>
+                    <li>🍪 Cookie consent auto-dismiss</li>
+                    <li>🛡️ Anti-adblock bypass</li>
+                    <li>🎯 Element picker & zapper</li>
+                    <li>📖 Clean reading mode</li>
+                    <li>🔄 Auto-updating filter lists</li>
+                    <li>💾 Import/export backup</li>
+                    <li>📊 Network request logger</li>
+                </ul>
                 <hr>
                 <p class="credits">Built with ❤️ for Nepali internet users.</p>
             </div>

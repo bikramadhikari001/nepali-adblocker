@@ -207,6 +207,10 @@ async function init(): Promise<void> {
     } else {
         setupMutationObserver(selectors);
     }
+
+    // Initialize premium features
+    import("./cookie-consent").then((m) => m.initCookieConsent());
+    import("./anti-adblock").then((m) => m.initAntiAdblock());
 }
 
 init();
