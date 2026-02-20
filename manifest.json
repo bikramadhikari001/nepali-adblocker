@@ -14,8 +14,7 @@
         "storage",
         "activeTab",
         "tabs",
-        "alarms",
-        "scripting"
+        "alarms"
     ],
     "host_permissions": [
         "*://*.onlinekhabar.com/*",
