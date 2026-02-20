@@ -57,3 +57,6 @@ temp/
 
 # Antigravity/Gemini brain (conversation-specific, not project code)
 .gemini/antigravity/brain/
+
+# Local Netlify folder
+.netlify

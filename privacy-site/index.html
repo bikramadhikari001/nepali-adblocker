@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Nepali Adblocker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #0d1117;
+            color: #e6edf3;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 48px 24px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 32px 0 12px;
+            color: #e94560;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 15px;
+            color: #8b949e;
+        }
+
+        strong {
+            color: #e6edf3;
+        }
+
+        ul {
+            margin: 0 0 16px 24px;
+        }
+
+        li {
+            margin-bottom: 6px;
+            font-size: 14px;
+            color: #8b949e;
+        }
+
+        code {
+            background: #161b22;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #e94560;
+        }
+
+        .date {
+            color: #484f58;
+            font-size: 13px;
+            margin-bottom: 32px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin: 32px 0;
+        }
+
+        a {
+            color: #58a6ff;
+        }
+
+        .logo {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p class="logo">🛡️</p>
+        <h1>Privacy Policy</h1>
+        <p class="date"><strong>Nepali Adblocker</strong> · Last updated: February 20, 2026</p>
+
+        <h2>Overview</h2>
+        <p>Nepali Adblocker is a Chrome extension that blocks advertisements, trackers, and annoyances on websites, with
+            a focus on Nepali websites. We are committed to protecting your privacy.</p>
+
+        <h2>Data Collection</h2>
+        <p><strong>Nepali Adblocker does NOT collect, store, transmit, or share any personal data whatsoever.</strong>
+        </p>
+        <p>Specifically, we do NOT:</p>
+        <ul>
+            <li>Collect browsing history</li>
+            <li>Track websites you visit</li>
+            <li>Store any personally identifiable information</li>
+            <li>Send analytics or telemetry data</li>
+            <li>Use cookies or tracking pixels</li>
+            <li>Share any data with third parties</li>
+            <li>Communicate with any remote server (except for filter list updates)</li>
+        </ul>
+
+        <h2>Data Storage</h2>
+        <p>All extension data is stored <strong>locally on your device</strong> using Chrome's built-in storage APIs:
+        </p>
+        <ul>
+            <li><strong>Whitelist settings</strong> — stored in <code>chrome.storage.sync</code> (synced to your Chrome
+                profile only)</li>
+            <li><strong>Custom filter rules</strong> — stored in <code>chrome.storage.local</code> (device only)</li>
+            <li><strong>Blocked request statistics</strong> — stored in <code>chrome.storage.local</code> (device only)
+            </li>
+            <li><strong>Request log</strong> — stored in <code>chrome.storage.local</code> (device only, capped at 500
+                entries)</li>
+        </ul>
+        <p>You can export and delete all stored data at any time through the extension's settings page.</p>
+
+        <h2>Network Requests</h2>
+        <p>The extension makes outbound network requests <strong>only</strong> for the following purpose:</p>
+        <ul>
+            <li><strong>Filter list updates</strong>: Periodically fetches updated ad filter lists from public sources
+                (EasyList, EasyPrivacy). These requests contain no user data — only standard HTTP headers.</li>
+        </ul>
+        <p>No other network requests are made by the extension.</p>
+
+        <h2>Permissions</h2>
+        <p>The extension requests the following Chrome permissions:</p>
+        <ul>
+            <li><code>declarativeNetRequest</code> — to block ad network requests</li>
+            <li><code>storage</code> — to save your settings locally</li>
+            <li><code>activeTab</code> / <code>tabs</code> — to display per-tab blocked counts</li>
+            <li><code>alarms</code> — to schedule filter list updates</li>
+            <li><code>scripting</code> — to inject content scripts for cosmetic filtering</li>
+            <li><code>&lt;all_urls&gt;</code> — required to apply ad blocking on all websites</li>
+        </ul>
+
+        <h2>Open Source</h2>
+        <p>The source code of Nepali Adblocker is open source and available for inspection.</p>
+
+        <h2>Changes</h2>
+        <p>If we make changes to this privacy policy, we will update the "Last updated" date above.</p>
+
+        <h2>Contact</h2>
+        <p>For questions or concerns, please open an issue on our GitHub repository.</p>
+
+        <hr>
+        <p style="text-align:center; font-size:13px; color:#484f58;">Built with ❤️ for Nepali internet users.</p>
+    </div>
+</body>
+
+</html>
