@@ -1,0 +1,217 @@
+[
+    {
+        "id": 1,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "requestDomains": [
+                "adsaronepal.com.np"
+            ],
+            "resourceTypes": [
+                "script",
+                "image",
+                "sub_frame",
+                "xmlhttprequest",
+                "stylesheet",
+                "font",
+                "media",
+                "other"
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "requestDomains": [
+                "admana.net"
+            ],
+            "resourceTypes": [
+                "script",
+                "image",
+                "sub_frame",
+                "xmlhttprequest",
+                "stylesheet",
+                "font",
+                "media",
+                "other"
+            ]
+        }
+    },
+    {
+        "id": 3,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*onlinekhabar*ad*",
+            "initiatorDomains": [
+                "onlinekhabar.com"
+            ],
+            "resourceTypes": [
+                "script",
+                "image",
+                "sub_frame",
+                "xmlhttprequest"
+            ]
+        }
+    },
+    {
+        "id": 4,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*ekantipur*ad*",
+            "initiatorDomains": [
+                "ekantipur.com"
+            ],
+            "resourceTypes": [
+                "script",
+                "image",
+                "sub_frame",
+                "xmlhttprequest"
+            ]
+        }
+    },
+    {
+        "id": 5,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*setopati*ad*",
+            "initiatorDomains": [
+                "setopati.com"
+            ],
+            "resourceTypes": [
+                "script",
+                "image",
+                "sub_frame",
+                "xmlhttprequest"
+            ]
+        }
+    },
+    {
+        "id": 6,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*ratopati*ad*",
+            "initiatorDomains": [
+                "ratopati.com"
+            ],
+            "resourceTypes": [
+                "script",
+                "image",
+                "sub_frame",
+                "xmlhttprequest"
+            ]
+        }
+    },
+    {
+        "id": 7,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*nagariknews*ad*",
+            "initiatorDomains": [
+                "nagariknews.com"
+            ],
+            "resourceTypes": [
+                "script",
+                "image",
+                "sub_frame",
+                "xmlhttprequest"
+            ]
+        }
+    },
+    {
+        "id": 8,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*hamropatro*ad*",
+            "initiatorDomains": [
+                "hamropatro.com"
+            ],
+            "resourceTypes": [
+                "script",
+                "image",
+                "sub_frame",
+                "xmlhttprequest"
+            ]
+        }
+    },
+    {
+        "id": 9,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*dcnepal*ad*",
+            "initiatorDomains": [
+                "dcnepal.com"
+            ],
+            "resourceTypes": [
+                "script",
+                "image",
+                "sub_frame",
+                "xmlhttprequest"
+            ]
+        }
+    },
+    {
+        "id": 10,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*krishisanjal*ad*",
+            "initiatorDomains": [
+                "krishisanjal.com"
+            ],
+            "resourceTypes": [
+                "script",
+                "image",
+                "sub_frame",
+                "xmlhttprequest"
+            ]
+        }
+    },
+    {
+        "id": 11,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*himalkhabar*ad*",
+            "initiatorDomains": [
+                "himalkhabar.com"
+            ],
+            "resourceTypes": [
+                "script",
+                "image",
+                "sub_frame",
+                "xmlhttprequest"
+            ]
+        }
+    }
+]

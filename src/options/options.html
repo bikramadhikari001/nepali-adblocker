@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepali Adblocker — Settings</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🛡️ Nepali Adblocker</h1>
+            <p class="subtitle">Settings & Dashboard</p>
+        </header>
+
+        <!-- Tabs -->
+        <nav class="tabs">
+            <button class="tab active" data-tab="filter-lists">Filter Lists</button>
+            <button class="tab" data-tab="whitelist">Whitelist</button>
+            <button class="tab" data-tab="custom-rules">My Rules</button>
+            <button class="tab" data-tab="about">About</button>
+        </nav>
+
+        <!-- Filter Lists Tab -->
+        <section id="filter-lists" class="tab-content active">
+            <h2>Filter Lists</h2>
+            <div class="list-item">
+                <label>
+                    <input type="checkbox" id="nepali-list" checked disabled>
+                    <strong>Nepali Ads Filter</strong>
+                    <span class="list-meta">Built-in · Blocks ads on top 100 Nepali sites</span>
+                </label>
+            </div>
+            <div class="list-item">
+                <label>
+                    <input type="checkbox" id="easylist-mini" checked disabled>
+                    <strong>EasyList (Curated)</strong>
+                    <span class="list-meta">Built-in · Common global ad domains</span>
+                </label>
+            </div>
+            <div class="list-info">
+                <p>Filter lists auto-update when the extension updates.</p>
+            </div>
+        </section>
+
+        <!-- Whitelist Tab -->
+        <section id="whitelist" class="tab-content">
+            <h2>Whitelisted Sites</h2>
+            <p class="info">Ad blocking is disabled on these sites.</p>
+            <ul id="whitelist-sites" class="site-list">
+                <!-- Populated by JS -->
+            </ul>
+            <p id="whitelist-empty" class="empty-msg">No sites whitelisted.</p>
+        </section>
+
+        <!-- Custom Rules Tab -->
+        <section id="custom-rules" class="tab-content">
+            <h2>My Rules</h2>
+            <p class="info">Add custom filter rules in ABP/uBlock Origin syntax.</p>
+            <textarea id="custom-rules-input" placeholder="! Example rules:
+||example-ad-domain.com^
+onlinekhabar.com##.my-custom-ad-class
+@@||allow-this-domain.com^" rows="12"></textarea>
+            <button id="save-rules" class="btn-primary">Save Rules</button>
+            <span id="save-status" class="save-status"></span>
+        </section>
+
+        <!-- About Tab -->
+        <section id="about" class="tab-content">
+            <h2>About</h2>
+            <div class="about-info">
+                <p><strong>Nepali Adblocker</strong> v1.0.0</p>
+                <p>A lightweight Chrome extension that blocks ads on Nepali websites, inspired by uBlock Origin.</p>
+                <p>Blocks ads on the top 100 Nepali websites with special focus on news sites like OnlineKhabar,
+                    Setopati, eKantipur, and more.</p>
+                <hr>
+                <p class="credits">Built with ❤️ for Nepali internet users.</p>
+            </div>
+        </section>
+    </div>
+    <script type="module" src="options.ts"></script>
+</body>
+
+</html>

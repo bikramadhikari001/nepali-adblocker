@@ -1,0 +1,58 @@
+{
+    "manifest_version": 3,
+    "name": "Nepali Adblocker",
+    "version": "1.0.0",
+    "description": "Block ads on Nepali websites. Lightweight, efficient, inspired by uBlock Origin.",
+    "icons": {
+        "16": "src/assets/icon16.png",
+        "48": "src/assets/icon48.png",
+        "128": "src/assets/icon128.png"
+    },
+    "permissions": [
+        "declarativeNetRequest",
+        "declarativeNetRequestFeedback",
+        "storage",
+        "activeTab",
+        "tabs"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "background": {
+        "service_worker": "src/background/service-worker.ts",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "src/content/cosmetic-filter.ts"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "action": {
+        "default_popup": "src/popup/popup.html",
+        "default_icon": {
+            "16": "src/assets/icon16.png",
+            "48": "src/assets/icon48.png"
+        }
+    },
+    "options_page": "src/options/options.html",
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "nepali_ads",
+                "enabled": true,
+                "path": "rules/nepali-rules.json"
+            },
+            {
+                "id": "easylist_mini",
+                "enabled": true,
+                "path": "rules/easylist-mini-rules.json"
+            }
+        ]
+    }
+}

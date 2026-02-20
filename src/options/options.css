@@ -1,0 +1,263 @@
+/* ── Options Page Styles — Nepali Adblocker ───────────────────────────────── */
+
+:root {
+    --bg-primary: #1a1a2e;
+    --bg-secondary: #16213e;
+    --bg-card: #0f3460;
+    --accent: #e94560;
+    --accent-hover: #ff6b81;
+    --accent-green: #00c853;
+    --text-primary: #eee;
+    --text-secondary: #aab;
+    --text-muted: #778;
+    --radius: 10px;
+    --shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+/* ── Header ────────────────────────────────────────────────────────────────── */
+
+.header {
+    margin-bottom: 28px;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* ── Tabs ──────────────────────────────────────────────────────────────────── */
+
+.tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0;
+}
+
+.tab {
+    padding: 10px 18px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s ease;
+}
+
+.tab:hover {
+    color: var(--text-primary);
+}
+
+.tab.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+/* ── Tab Content ───────────────────────────────────────────────────────────── */
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.info {
+    color: var(--text-secondary);
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+/* ── Filter Lists ──────────────────────────────────────────────────────────── */
+
+.list-item {
+    background: var(--bg-secondary);
+    border-radius: var(--radius);
+    padding: 16px;
+    margin-bottom: 8px;
+}
+
+.list-item label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.list-item input[type="checkbox"] {
+    float: right;
+    accent-color: var(--accent-green);
+}
+
+.list-meta {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.list-info {
+    margin-top: 12px;
+    padding: 12px;
+    background: rgba(233, 69, 96, 0.08);
+    border-radius: var(--radius);
+    border-left: 3px solid var(--accent);
+}
+
+.list-info p {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+/* ── Whitelist ─────────────────────────────────────────────────────────────── */
+
+.site-list {
+    list-style: none;
+}
+
+.site-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-secondary);
+    border-radius: var(--radius);
+    padding: 12px 16px;
+    margin-bottom: 6px;
+}
+
+.site-name {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-remove {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(233, 69, 96, 0.15);
+    color: var(--accent);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.btn-remove:hover {
+    background: var(--accent);
+    color: white;
+}
+
+.empty-msg {
+    color: var(--text-muted);
+    font-size: 13px;
+    text-align: center;
+    padding: 32px;
+}
+
+/* ── Custom Rules ──────────────────────────────────────────────────────────── */
+
+textarea {
+    width: 100%;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius);
+    padding: 14px;
+    font-family: "SF Mono", "Fira Code", monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    resize: vertical;
+    outline: none;
+}
+
+textarea:focus {
+    border-color: var(--accent);
+}
+
+textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.btn-primary {
+    margin-top: 12px;
+    padding: 10px 24px;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--accent);
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+.save-status {
+    margin-left: 12px;
+    font-size: 13px;
+    color: var(--accent-green);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.save-status.visible {
+    opacity: 1;
+}
+
+/* ── About ─────────────────────────────────────────────────────────────────── */
+
+.about-info {
+    background: var(--bg-secondary);
+    border-radius: var(--radius);
+    padding: 20px;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.about-info hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 16px 0;
+}
+
+.credits {
+    color: var(--text-muted);
+    font-size: 13px;
+}
