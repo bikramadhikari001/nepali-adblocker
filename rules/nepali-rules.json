@@ -42,5 +42,71 @@
                 "other"
             ]
         }
+    },
+    {
+        "id": 3,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*/plugins/okam/*",
+            "initiatorDomains": [
+                "onlinekhabar.com"
+            ],
+            "resourceTypes": [
+                "script"
+            ]
+        }
+    },
+    {
+        "id": 4,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*rotate-adv*",
+            "initiatorDomains": [
+                "onlinekhabar.com"
+            ],
+            "resourceTypes": [
+                "script"
+            ]
+        }
+    },
+    {
+        "id": 5,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*/bigyaapan/*",
+            "initiatorDomains": [
+                "setopati.com"
+            ],
+            "resourceTypes": [
+                "image",
+                "sub_frame"
+            ]
+        }
+    },
+    {
+        "id": 6,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*dnn-ad*",
+            "initiatorDomains": [
+                "ratopati.com"
+            ],
+            "resourceTypes": [
+                "script",
+                "sub_frame"
+            ]
+        }
     }
 ]
