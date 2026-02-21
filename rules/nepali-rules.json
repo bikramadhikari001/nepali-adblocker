@@ -50,15 +50,13 @@
             "type": "block"
         },
         "condition": {
-            "urlFilter": "*onlinekhabar*ad*",
+            "urlFilter": "*/ok-ad*",
             "initiatorDomains": [
                 "onlinekhabar.com"
             ],
             "resourceTypes": [
                 "script",
-                "image",
-                "sub_frame",
-                "xmlhttprequest"
+                "sub_frame"
             ]
         }
     },
@@ -69,15 +67,13 @@
             "type": "block"
         },
         "condition": {
-            "urlFilter": "*ekantipur*ad*",
+            "urlFilter": "*/ad-unit*",
             "initiatorDomains": [
                 "ekantipur.com"
             ],
             "resourceTypes": [
                 "script",
-                "image",
-                "sub_frame",
-                "xmlhttprequest"
+                "sub_frame"
             ]
         }
     },
@@ -88,15 +84,14 @@
             "type": "block"
         },
         "condition": {
-            "urlFilter": "*setopati*ad*",
+            "urlFilter": "*/bigyaapan/*",
             "initiatorDomains": [
                 "setopati.com"
             ],
             "resourceTypes": [
                 "script",
-                "image",
                 "sub_frame",
-                "xmlhttprequest"
+                "image"
             ]
         }
     },
@@ -107,15 +102,13 @@
             "type": "block"
         },
         "condition": {
-            "urlFilter": "*ratopati*ad*",
+            "urlFilter": "*/rato-ad*",
             "initiatorDomains": [
                 "ratopati.com"
             ],
             "resourceTypes": [
                 "script",
-                "image",
-                "sub_frame",
-                "xmlhttprequest"
+                "sub_frame"
             ]
         }
     },
@@ -126,15 +119,13 @@
             "type": "block"
         },
         "condition": {
-            "urlFilter": "*nagariknews*ad*",
+            "urlFilter": "*/nagarik-ad*",
             "initiatorDomains": [
                 "nagariknews.com"
             ],
             "resourceTypes": [
                 "script",
-                "image",
-                "sub_frame",
-                "xmlhttprequest"
+                "sub_frame"
             ]
         }
     },
@@ -145,15 +136,13 @@
             "type": "block"
         },
         "condition": {
-            "urlFilter": "*hamropatro*ad*",
+            "urlFilter": "*/hp-ad*",
             "initiatorDomains": [
                 "hamropatro.com"
             ],
             "resourceTypes": [
                 "script",
-                "image",
-                "sub_frame",
-                "xmlhttprequest"
+                "sub_frame"
             ]
         }
     },
@@ -164,15 +153,13 @@
             "type": "block"
         },
         "condition": {
-            "urlFilter": "*dcnepal*ad*",
+            "urlFilter": "*/dc-ad*",
             "initiatorDomains": [
                 "dcnepal.com"
             ],
             "resourceTypes": [
                 "script",
-                "image",
-                "sub_frame",
-                "xmlhttprequest"
+                "sub_frame"
             ]
         }
     },
@@ -183,15 +170,13 @@
             "type": "block"
         },
         "condition": {
-            "urlFilter": "*krishisanjal*ad*",
+            "urlFilter": "*/ks-ad*",
             "initiatorDomains": [
                 "krishisanjal.com"
             ],
             "resourceTypes": [
                 "script",
-                "image",
-                "sub_frame",
-                "xmlhttprequest"
+                "sub_frame"
             ]
         }
     },
@@ -202,15 +187,13 @@
             "type": "block"
         },
         "condition": {
-            "urlFilter": "*himalkhabar*ad*",
+            "urlFilter": "*/himal-ad*",
             "initiatorDomains": [
                 "himalkhabar.com"
             ],
             "resourceTypes": [
                 "script",
-                "image",
-                "sub_frame",
-                "xmlhttprequest"
+                "sub_frame"
             ]
         }
     }
