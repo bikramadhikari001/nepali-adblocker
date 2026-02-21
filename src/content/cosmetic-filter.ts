@@ -35,17 +35,12 @@ const GLOBAL_SELECTORS: string[] = [
 // Site-specific cosmetic selectors
 const SITE_SELECTORS: Record<string, string[]> = {
     "onlinekhabar.com": [
-        ".ok-ad",
-        ".ok-ads-wrapper",
-        ".ok-ad-container",
-        ".ads-banner-wrap",
-        ".ok-billboard",
+        ".okam-ad-position-wrap",
+        ".okam-each-ad",
+        ".ok-full-widht-adv",
         ".ok-sidebar-ad",
-        ".ok-sticky-ad",
-        '#ok-ad-top',
-        ".inner-ad-wrap",
-        ".ad-above-fold",
-        ".sponsored-content",
+        ".add__fullwidth",
+        ".left_add",
     ],
     "ekantipur.com": [
         ".ad-unit",
@@ -53,9 +48,6 @@ const SITE_SELECTORS: Record<string, string[]> = {
         ".ek-ad-wrapper",
         ".sidebar-advertisement",
         ".article-ad",
-        ".banner-ad",
-        ".ek-billboard",
-        ".story-ad",
     ],
     "setopati.com": [
         ".full-bigyaapan",
@@ -67,18 +59,21 @@ const SITE_SELECTORS: Record<string, string[]> = {
         ".top-main-ads",
         ".mast-head-ad",
     ],
+    "ratopati.com": [
+        ".dnn-ad-placeholder",
+        ".full-banner-adv",
+        ".adv-item",
+        ".dn__side--add",
+        ".sidebar-adv",
+        ".sticky-footer-ad",
+        ".sticky-banner-adv",
+        ".skip__banner-ad",
+    ],
     "nagariknews.com": [
         ".nagarik-ad",
         ".ad-area",
         ".sidebar-ad-block",
         ".top-ad-area",
-        ".in-article-ad",
-    ],
-    "ratopati.com": [
-        ".rato-ad",
-        ".ad-block",
-        ".sidebar-ads",
-        ".top-ads",
         ".in-article-ad",
     ],
     "hamropatro.com": [
@@ -91,7 +86,6 @@ const SITE_SELECTORS: Record<string, string[]> = {
         ".dc-ad",
         ".widget-ad",
         ".entry-ad",
-        ".sidebar-widget-ad",
     ],
     "himalkhabar.com": [
         ".himal-ad",
@@ -100,7 +94,6 @@ const SITE_SELECTORS: Record<string, string[]> = {
     ],
     "krishisanjal.com": [
         ".ks-ad",
-        ".ad-block",
     ],
 };
 
