@@ -50,7 +50,7 @@
             "type": "block"
         },
         "condition": {
-            "urlFilter": "*/plugins/okam/*",
+            "urlFilter": "*okam-frontend*",
             "initiatorDomains": [
                 "onlinekhabar.com"
             ],
