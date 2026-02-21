@@ -58,10 +58,14 @@ const SITE_SELECTORS: Record<string, string[]> = {
         ".story-ad",
     ],
     "setopati.com": [
-        ".seto-ad",
-        ".setopati-ad",
-        ".banner-advertisement",
-        '[id^="setopati-ad"]',
+        ".full-bigyaapan",
+        ".bigyaapan-item",
+        ".mobile-bigyaapan-only",
+        ".desktop-bigyaapan-only",
+        ".footer-fixed-bigyaapan",
+        ".sticky-footer-bigyaapan",
+        ".top-main-ads",
+        ".mast-head-ad",
     ],
     "nagariknews.com": [
         ".nagarik-ad",
