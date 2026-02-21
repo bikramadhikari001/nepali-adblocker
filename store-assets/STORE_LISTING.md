@@ -1,30 +1,28 @@
 # Chrome Web Store Listing
 
 ## Name
-Nepali Adblocker — Block Ads on Nepali Sites
+Nepali Adblocker
 
 ## Short Description (132 chars max)
-Block ads, trackers, and annoyances on Nepali websites. Clean reading mode, element picker, and auto-dismiss cookie banners.
+Block ads, trackers, and cookie banners on Nepali websites. Includes clean reading mode, element picker, and privacy protection.
 
 ## Detailed Description
 
-🛡️ Nepali Adblocker — Premium Ad Blocking for Nepal
+🛡️ Premium ad blocking designed for the Nepali web.
 
-The first ad blocker built specifically for Nepali websites. Block ads, trackers, and annoyances on OnlineKhabar, eKantipur, Setopati, Ratopati, and 100+ more Nepali sites.
+Block intrusive ads, trackers, and annoyances across popular Nepali news and content websites.
 
 ⸻
 
 ✨ FEATURES
 
 🚫 Ad Blocking
-• Network-level blocking via Chrome's declarativeNetRequest API
-• 45+ built-in rules targeting Nepali ad networks and Google Ads
-• Cosmetic filtering to hide ad elements visually
+• Network-level blocking with 45+ built-in filter rules
+• Cosmetic filtering to visually hide ad elements
 • Custom rules support (ABP/uBlock Origin syntax)
 
 🔒 Privacy Protection
-• Blocks Google Analytics, Facebook Pixel, Hotjar, and 20+ trackers
-• Fingerprint blocking
+• Blocks 20+ known trackers and fingerprinting scripts
 • No data collected — everything stays on your device
 
 🍪 Cookie Consent Auto-Dismiss
@@ -33,44 +31,24 @@ The first ad blocker built specifically for Nepali websites. Block ads, trackers
 
 🛡️ Anti-Adblock Bypass
 • Defeats "please disable your adblocker" walls
-• Smart decoy injection to fool detection scripts
 
 📖 Clean Reading Mode
-• One-click transforms cluttered news articles into beautiful, distraction-free reading
+• Transforms cluttered news articles into distraction-free reading
 • Optimized for Devanagari/Nepali typography
-• Dark/light themes, adjustable font size
-• Works on OnlineKhabar, eKantipur, Setopati, and more
+• Dark/light themes with adjustable font size
 
 🎯 Element Picker & Zapper
 • Point-and-click to hide any element on any page
-• Picker: permanently block element (saved to your rules)
-• Zapper: temporarily remove element
+• Save rules permanently or remove elements temporarily
 
 🔄 Auto-Updating Filter Lists
-• Fetches latest EasyList, EasyPrivacy, and Nepali ad list
-• Updates automatically every 6 hours
+• Fetches the latest community filter lists automatically
 
 📊 Network Logger
 • See exactly which requests are being blocked and why
-• Real-time log with 500-entry history
 
 💾 Backup & Restore
 • Export/import your settings as JSON
-• Move settings between devices
-
-⸻
-
-🇳🇵 SUPPORTED NEPALI SITES
-• OnlineKhabar
-• eKantipur
-• Setopati
-• Ratopati
-• NagarikNews
-• HamroPatro
-• DCNepal
-• HimalKhabar
-• KrishiSanjal
-• And 90+ more…
 
 ⸻
 
@@ -78,13 +56,10 @@ The first ad blocker built specifically for Nepali websites. Block ads, trackers
 • No user data collected or transmitted
 • No analytics or telemetry
 • All settings stored locally on your device
-• Open source
 
 ⸻
 
-💡 Inspired by uBlock Origin, built for Nepal.
-
-If you find a site where ads aren't being blocked, please report it via the extension's feedback feature. We'll add rules for it!
+If you find a site where ads aren't blocked, let us know — we'll add rules for it!
 
 ## Category
 Productivity
@@ -93,4 +68,4 @@ Productivity
 English
 
 ## Website
-https://github.com/bikramadhikari/nepali-adblocker
+https://github.com/bikramadhikari001/nepali-adblocker
